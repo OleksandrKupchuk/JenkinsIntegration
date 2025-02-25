@@ -22,12 +22,12 @@ public class BrowserFactory {
 
                 Map<String, Object> prefs = new HashMap<>();
                 prefs.put("profile.default_content_settings.popups", 0);
-                prefs.put("download.default_directory", "D:/Homework/HillelTest/target");
+                prefs.put("download.default_directory", "D:\\Homework\\HillelTest\\target\\files");
 
                 ChromeOptions options = new ChromeOptions();
                 options.setExperimentalOption("prefs", prefs);
 
-                driver = new ChromeDriver();
+                driver = new ChromeDriver(options);
                 driver.manage().window().maximize();
                 break;
             case "firefox":
