@@ -12,10 +12,6 @@ import java.util.Map;
 public class BrowserFactory {
     private static WebDriver driver;
     public static void createDriver(String browserName){
-        if(driver != null){
-            return;
-        }
-
         switch (browserName.toLowerCase()){
             case "chrome":
                 WebDriverManager.chromedriver().setup();
@@ -30,10 +26,12 @@ public class BrowserFactory {
                 driver = new ChromeDriver(options);
                 driver.manage().window().maximize();
                 break;
+
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();
                 break;
+
             default:
                 throw new IllegalArgumentException(String.format("This browser name '%s' don`t support"));
         }

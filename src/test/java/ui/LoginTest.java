@@ -2,23 +2,12 @@ package ui;
 
 import org.testng.Assert;
 import org.testng.annotations.*;
-import patterns.BrowserFactory;
 import patterns.pageobject.LoginPage;
 import patterns.pageobject.SecureAreaPage;
-import projectconfig.ProjectConfig;
+import setup.TestSetup;
 
-public class LoginTest {
-    @BeforeMethod
-    public void setup() {
-        BrowserFactory.createDriver(ProjectConfig.BROWSER_NAME);
-    }
-
-    @AfterMethod
-    public void tearDown() {
-        BrowserFactory.quitDriver();
-    }
-
-    @Test
+public class LoginTest extends TestSetup {
+    @Test(groups = {"smoke"})
     public void loginUsingPageObject() {
         new LoginPage()
                 .open()
