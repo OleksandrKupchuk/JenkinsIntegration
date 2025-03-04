@@ -1,5 +1,6 @@
 package patterns;
 
+import com.codeborne.selenide.WebDriverRunner;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -25,6 +26,7 @@ public class BrowserFactory {
 
                 driver = new ChromeDriver(options);
                 driver.manage().window().maximize();
+                WebDriverRunner.setWebDriver(driver);
                 break;
 
             case "firefox":

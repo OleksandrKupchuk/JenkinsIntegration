@@ -40,6 +40,11 @@
             <artifactId>logger-java-log4j</artifactId>
             <version>5.2.3</version>
         </dependency>
+        <dependency>
+            <groupId>com.codeborne</groupId>
+            <artifactId>selenide</artifactId>
+            <version>7.6.0</version>
+        </dependency>
     </dependencies>
 
 </project>
