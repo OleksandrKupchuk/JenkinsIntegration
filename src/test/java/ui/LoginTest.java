@@ -36,4 +36,9 @@ public class LoginTest extends TestSetup {
 
         Assert.assertEquals(title.trim(), "Secure Area");
     }
+
+    @Test(groups = {"ui"})
+    public void loginSuccess() {
+        System.out.println("Login success");
+    }
 }
