@@ -11,6 +11,7 @@ import java.util.Properties;
 public class ProjectConfig {
     private static Properties properties = new Properties();
     public static final String BROWSER_NAME = System.getProperty("browser.name", getProperty("browser.name"));
+    public static final String REMOTE_URL = System.getProperty("remote.url", getProperty("remote.url"));
 
     private static String getProperty(String propertyName){
         try {
